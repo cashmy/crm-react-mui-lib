@@ -1,1 +1,8 @@
+# Run lingt before commit
+npm run lint
+
+# Run tests before commit
 npm test
+
+# Run build before commit
+npm run build
