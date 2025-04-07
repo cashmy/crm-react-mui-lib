@@ -1,6 +1,5 @@
 // Button.stories.tsx
 import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
 import Button from "./Button";
 
 const meta: Meta<typeof Button> = {
@@ -11,7 +10,9 @@ const meta: Meta<typeof Button> = {
     backgroundColor: { control: "color" },
     onClick: { action: "clicked" },
   },
-  args: { onClick: fn() },
+  args: {
+    onClick: undefined, // Let the component's default behavior handle this
+  },
 };
 
 export default meta;

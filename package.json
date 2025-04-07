@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -23,7 +24,7 @@
     "release:major": "standard-version --release-as major",
     "release:prerelease": "standard-version --prerelease prerelease",
     "release:dry": "standard-version --dry-run",
-    "commtlint": "commitlint --edit"
+    "commitlint": "commitlint --edit"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -42,6 +43,8 @@
     "@mui/lab": "^7.0.0-beta.10",
     "@mui/material": "^7.0.1",
     "@storybook/addon-essentials": "^8.6.12",
+    "@storybook/addon-interactions": "^8.6.12",
+    "@storybook/addon-links": "^8.6.12",
     "@storybook/addon-onboarding": "^8.6.12",
     "@storybook/addon-themes": "^8.6.12",
     "@storybook/blocks": "^8.6.12",
