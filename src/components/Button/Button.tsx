@@ -11,14 +11,16 @@ import {
 // This is useful for cases where you want to set a specific color for the button that is not part of the theme.
 
 interface ButtonProps extends MuiButtonProps {
-  label: string;
+  label?: string;
   backgroundColor?: string; // Optional backgroundColor prop
+  children?: React.ReactNode; // Optional children prop for custom content
 }
 
 const Button = ({
   label,
   backgroundColor,
   onClick = () => alert(`Button ${label} clicked`),
+  children,
   ...rest
 }: ButtonProps) => (
   <MuiButton
@@ -29,7 +31,7 @@ const Button = ({
       ...rest.style, // Merge with other styles
     }}
   >
-    {label}
+    {(label && label) || children}
   </MuiButton>
 );
 
