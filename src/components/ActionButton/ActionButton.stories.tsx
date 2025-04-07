@@ -4,9 +4,17 @@ import ActionButton from "./ActionButton";
 import SearchIcon from "@mui/icons-material/Search";
 
 const meta: Meta<typeof ActionButton> = {
-  title: "ReactMUIComponents/ActionButton",
+  title: "Custom Components/ActionButton",
   component: ActionButton,
   tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "The `ActionButton` component is an** *icon only* **based button that can be used to perform various actions. Which means you can use it in table rows for minimum allotment of space. It is built using the MUI library and supports accessibility features. It has the standard MUI button props, as well as allowing for your custom ones. The component is designed to be flexible and can be easily integrated into various applications. It is particularly useful for forms or **tables** where users need to perform actions such as adding, editing, deleting, archiving, or unarchiving items.",
+      },
+    },
+  },
   argTypes: {
     backgroundColor: { control: "color" },
     onClick: {

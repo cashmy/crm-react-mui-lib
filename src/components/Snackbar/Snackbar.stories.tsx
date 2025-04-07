@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Notification from "./Snackbar";
 
 const meta: Meta<typeof Notification> = {
-  title: "ReactMUIComponents/Notification",
+  title: "Custom Components/Notification",
   component: Notification,
   tags: ["autodocs"],
   argTypes: {
