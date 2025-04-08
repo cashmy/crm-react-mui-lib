@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Meta, StoryFn } from "@storybook/react";
 import ColorPicker, { ColorPickerProps } from "./ColorPicker";
+import Button from "../Button/Button"; // Assuming Button is a custom component in your project
+import Dialog from "../Dialog/Dialog"; // Assuming Dialog is a custom component in your project
 
 export default {
   title: "Custom Components/ColorPicker",
@@ -48,4 +50,40 @@ WithError.args = {
   label: "Pick a Color",
   value: "#00ff00",
   error: "Invalid color",
+};
+
+export const InDialog = () => {
+  const [color, setColor] = useState("#000000");
+  const [openPopup, setOpenPopup] = useState(false);
+
+  const handleClose = () => setOpenPopup(false);
+
+  const handleChange = (
+    event: React.ChangeEvent<{ name: string; value: string }>
+  ) => {
+    setColor(event.target.value);
+  };
+
+  return (
+    <>
+      <Button variant="contained" onClick={() => setOpenPopup(true)}>
+        Open Color Picker Dialog
+      </Button>
+      <Dialog
+        title="Select a Color"
+        open
+        openPopup={openPopup}
+        setOpenPopup={setOpenPopup}
+      >
+        <ColorPicker
+          label="Pick a Color"
+          value={color}
+          onChange={handleChange}
+        />
+        <Button onClick={handleClose} color="primary" style={{ marginTop: 16 }}>
+          Close
+        </Button>
+      </Dialog>
+    </>
+  );
 };
