@@ -11,6 +11,13 @@
  *           - Uses the useClickOutside helper function to handle the click outside of the modal/dialog.
  *           - Uses the useRef hook to handle the click outside of the modal/dialog.
  *           - Uses the useCallback function to handle change and pass value to parent.
+ * @param {object} props
+ * @param {string} props.name    - field name     default: 'cpkColor'
+ * @param {string} props.label   - field label    default: 'Color'
+ * @param {string} props.value   - field value    REQUIRED
+ * @param {string} props.error   - field error    default: null
+ * @param {string} props.variant - field variant  default: 'filled'
+ * @param {function} props.onChange - callback function when color changes (REQUIRED)
  */
 
 import React, { Fragment, useState, useRef, useCallback } from "react";

@@ -1,5 +1,6 @@
 {
   "name": "crm-react-mui-lib",
+  "description": "A React component library built with Material-UI. Opinionated towards data-heavy applications.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -24,7 +25,8 @@
     "release:major": "standard-version --release-as major",
     "release:prerelease": "standard-version --prerelease prerelease",
     "release:dry": "standard-version --dry-run",
-    "commitlint": "commitlint --edit"
+    "commitlint": "commitlint --edit",
+    "chromatic": "npx chromatic --project-token=chpt_1a75c30b54a2159"
   },
   "dependencies": {
     "react": ">=17.0.0",
@@ -60,6 +62,7 @@
     "@vitest/browser": "^3.1.1",
     "@vitest/coverage-v8": "^3.1.1",
     "@vitest/ui": "^3.1.1",
+    "chromatic": "^11.28.0",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",
     "eslint": "^9.21.0",
