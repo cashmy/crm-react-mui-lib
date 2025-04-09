@@ -29,7 +29,7 @@ const meta: Meta<typeof TextareaAutosize> = {
       description: "Name (db) attribute for the textarea",
       defaultValue: "textarea-name",
     },
-    arealabel: {
+    arialabel: {
       control: "text",
       description: "Aria label for accessibility",
       defaultValue: "Textarea label",

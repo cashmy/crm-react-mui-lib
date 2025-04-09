@@ -4,7 +4,7 @@ import Select from "./Select";
 import { SelectChangeEvent } from "@mui/material";
 
 export default {
-  title: "Components/Select",
+  title: "Custom Components/Select",
   component: Select,
   tags: ["autodocs"],
   parameters: {
@@ -17,7 +17,44 @@ export default {
     },
   },
   argTypes: {
+    label: {
+      control: "text",
+      description: "Label for the select field",
+      defaultValue: "Label",
+    },
+    name: {
+      control: "text",
+      description: "Name (db) attribute for the textarea",
+      defaultValue: "select-name",
+    },
+    value: {
+      control: "text",
+      description:
+        "Current (db) value of the field taken from the select list ",
+      defaultValue: "",
+    },
+    allowNone: {
+      control: "boolean",
+      description: "Whether to allow a 'None' option",
+      defaultValue: true, // Explicitly set the default value here
+    },
+    errorMessage: {
+      control: "text",
+      description: "Error message to display",
+    },
     onChange: { action: "changed" },
+  },
+  args: {
+    name: "select-name",
+    label: "Select Label",
+    value: "",
+    allowNone: true,
+    errorMessage: null,
+    options: [
+      { id: "option1", title: "Option 1" },
+      { id: "option2", title: "Option 2" },
+      { id: "option3", title: "Option 3" },
+    ],
   },
 } as Meta<typeof Select>;
 
@@ -70,6 +107,7 @@ NumberOfEggs.args = {
   name: "eggs",
   label: "Select Number of Eggs",
   value: "",
+  allowNone: true,
   options: [
     { id: "1", title: "1 Egg" },
     { id: "2", title: "2 Eggs" },
