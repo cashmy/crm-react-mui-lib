@@ -7,20 +7,7 @@ import {
   Switch as MuiSwitch,
   SwitchProps as MuiSwitchProps,
 } from "@mui/material";
-
-type TooltipPlacement =
-  | "top-start"
-  | "top"
-  | "top-end"
-  | "left-start"
-  | "left"
-  | "left-end"
-  | "bottom-start"
-  | "bottom"
-  | "bottom-end"
-  | "right-start"
-  | "right"
-  | "right-end";
+import { TooltipPlacement } from "../../common/types";
 
 interface SwitchProps extends Omit<MuiSwitchProps, "onChange"> {
   name: string;
