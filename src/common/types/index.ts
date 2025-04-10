@@ -5,6 +5,15 @@ export type ColorType =
   | "warning"
   | "info"
   | "success";
+export type ColorTypeString =
+  | "default"
+  | "primary"
+  | "secondary"
+  | "error"
+  | "warning"
+  | "info"
+  | "success"
+  | string; // Allow any string for custom colors
 
 export type TooltipPlacement =
   | "top-start"
