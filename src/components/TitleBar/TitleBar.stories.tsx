@@ -1,7 +1,9 @@
 import { Meta, StoryFn } from "@storybook/react";
 import TitleBar from "./TitleBar";
 import { ColorType } from "../../common/types";
+import { ColorTypeEnum } from "../../common/enums";
 import { BrowserRouter as Router } from "react-router-dom";
+import TextOrSelectControl from "../../storybook/controls/TextOrSelectControl";
 
 export default {
   title: "Custom Components/TitleBar",
@@ -35,12 +37,19 @@ export default {
     primaryColor: {
       description:
         "Color of the 'Add' button. Can be a predefined color or a custom string.",
-      control: "text",
+      control: {
+        // type: "text-or-select",
+        render: TextOrSelectControl,
+        labels: [...Object.values(ColorTypeEnum), "string"],
+      },
+      options: [...Object.values(ColorTypeEnum), "string"],
+      defaultValue: { custom: "", preset: "primary" },
     },
     secondaryColor: {
       description:
         "Color of the 'Return' button. Can be a predefined color or a custom string.",
-      control: "text",
+      control: "select",
+      options: [...Object.values(ColorTypeEnum), "custom-string"],
     },
     backgroundColor: {
       description: "Background color of the TitleBar.",
