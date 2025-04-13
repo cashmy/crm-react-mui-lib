@@ -11,8 +11,7 @@ const meta: Meta<typeof DatePicker> = {
   parameters: {
     docs: {
       description: {
-        component:
-          "The `DatePicker` component is a wrapper around the MUI `DatePicker` component. It provides auto-inclusion of localization and allows for easy integration into forms. The component supports validation, error handling, and customization of labels and formats.",
+        component: `The \`DatePicker\` component is a wrapper around the MUI \`DatePicker\` component. It provides auto-inclusion of localization and allows for easy integration into forms. The component supports validation, error handling, and customization of labels and formats. \n\n*Technical Note*: The component uses the \`AdapterDateFns\` from MUI's date library for date handling. It is important to ensure that the \`date-fns\` library is installed in your project to avoid any runtime errors. Also the format is limited to local date-fns format options.`,
       },
     },
   },

@@ -5,6 +5,7 @@ export type ColorType =
   | "warning"
   | "info"
   | "success";
+
 export type ColorTypeString =
   | "default"
   | "primary"
